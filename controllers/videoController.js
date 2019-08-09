@@ -51,6 +51,7 @@ export const postUpload = async (req, res) => {
 // Video Detail
 
 export const videoDetail = async (req, res) => {
+  console.log(req);
   const {
     params: { id }
   } = req;
