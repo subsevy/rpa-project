@@ -10,7 +10,7 @@ import MongoStore from "connect-mongo";
 import { localsMiddleware } from "./middlewares";
 import routes from "./routes";
 import userRouter from "./routers/userRouter";
-import videoRouter from "./routers/videoRouter";
+import processRouter from "./routers/processRouter";
 import globalRouter from "./routers/globalRouter";
 
 import "./passport";
@@ -43,6 +43,6 @@ app.use(localsMiddleware);
 
 app.use(routes.home, globalRouter);
 app.use(routes.users, userRouter);
-app.use(routes.videos, videoRouter);
+app.use(routes.rpa, processRouter);
 
 export default app;

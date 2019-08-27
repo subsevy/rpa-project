@@ -1,11 +1,9 @@
 header.header
     .header__wrapper
         .header__column
-            a(href=routes.home)
-                i.fab.fa-youtube
-        .header__column
-            form(action=routes.search, method="get")
-                input(type="text", placeholder="Search by term...", name="term")
+            a(href=routes.home).logo-box
+                img(src="https://iot.airmapkorea.kt.com/info/img/footer_ci.png", alt="")
+                span.logo ing
         .header__column
             ul
                 if !loggedUser
@@ -14,8 +12,6 @@ header.header
                     li
                         a(href=routes.login) Log In
                 else 
-                    li
-                        a(href=`/videos${routes.upload}`) Upload
                     li
                         a(href=routes.me) Profile
                     li

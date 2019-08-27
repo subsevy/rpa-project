@@ -90,3 +90,5 @@ typings/
 package-lock.json
 uploads
 static
+settings.json
+env.py

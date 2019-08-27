@@ -1,0 +1,8 @@
+extends layouts/main
+
+block content
+    .loading
+        span checking...
+    .form-container
+        form(action=`/rpa${routes.checking}`, method="post")
+            input(type="submit", value="Stop")

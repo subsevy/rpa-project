@@ -1,40 +1,89 @@
 .form-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  form {
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 50px;
-    input:not([type="file"]),
-    .fileUpload {
-      display: block;
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      &:not(:last-child) {
-        margin-bottom: 25px;
-      }
-    }
-    textarea {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      margin-bottom: 25px;
-    }
-    input[type="submit"] {
-      background-color: #3498db;
-      color: white;
-    }
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  text-align: center;
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    border: 0;
+    background-color: #263859;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+    border: 2px solid #263859;
+    padding: 4% 2%;
+    width: 70%;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
   }
-  a {
-    max-width: 320px;
-    width: 100%;
+  select {
+    text-align-last: center;
   }
-  .fileUpload {
-    label {
-      font-weight: 300;
-      margin-right: 10px;
-    }
+  input::placeholder {
+    color: white;
+    opacity: 0.5;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  select:focus {
+    width: 100%;
+    border-color: #23bdb7;
+  }
+  input[type="submit"] {
+    background-color: #fff;
+    border: 2px solid #23bdb7;
+    color: #263859;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+    padding: 4% 2%;
+    width: 70%;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  input[type="submit"]:hover {
+    background: #74b49b;
+    border: 2px solid #263859;
+    color: white;
+  }
+}
+
+.form-container2 {
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%, -25%);
+  background: none;
+  text-align: center;
+  input[type="submit"] {
+    background-color: #fff;
+    border: 2px solid #23bdb7;
+    color: #263859;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+    padding: 4% 2%;
+    width: 70%;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  input[type="submit"]:hover {
+    background: #74b49b;
+    border: 2px solid #263859;
+    color: white;
   }
 }

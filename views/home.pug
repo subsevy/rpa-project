@@ -1,12 +1,15 @@
 extends layouts/main
-include mixins/videoBlock
 
 block content
-    .home-videos
-        each item in videos
-            +videoBlock({
-                id:item.id,
-                title:item.title,
-                views:item.views,
-                videoFile:item.fileUrl
-            })
+    .form-container
+        form(action=routes.home, method="post")
+            input(type="text", placeholder="Url", name="url")
+            select(name="How")
+                option(name="Telegram") Telegram
+                option(name="Text Message") Text Message
+                option(name="Email") Email
+            input(type="text", placeholder="Your Contact", name="contact")
+            select(name="Test")
+                option(name="SQL injection") SQL injection
+                option(name="XSS") XSS
+            input(type="submit", value="Start")
